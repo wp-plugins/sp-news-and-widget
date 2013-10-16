@@ -13,9 +13,12 @@ A quick, easy way to add an extensible News custom post type, News widget and ve
 
 This plugin add a News custom post type,  News widget and vertical news scrolling widget to your Wordpress site.
 
-The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts. The archive list of your news items will appear at '/news', and individual news items will appear at '/news/<permalink>'.
+The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts. Your all news items will appear at '/news', and single news items will appear at '/news/<permalink>'.
 
 Default Single news and All News  templates for news items are also provided. One stylesheet is also provided with these templates so that you can design it as per your layout.
+
+If you are getting any kind of problum with "/news" link means your are not able to see all news items then please remodify your permalinks Structure for example 
+first select "Default" and save then again select "Custom Structure "  and save. 
 
 Finally, the plugin adds a Recent News Items widget and vertical news scrolling widget , which can be placed on any sidebar available in your theme. You can set the title of this list and the number of news items to show.
  
@@ -38,7 +41,7 @@ Yes. Just as you can display a list of your regular posts by year, month, or day
 
 = Do I need to update my permalinks after I activate this plugin? =
 
-No, not usually. But if you are geting 404 error on single news then please  update your permalinks to Custom Structure.   
+No, not usually. But if you are geting "/news" page OR 404 error on single news then please  update your permalinks to Custom Structure.   
 
 = Are there shortcodes for news items? =
 
