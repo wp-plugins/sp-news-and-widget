@@ -7,7 +7,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A quick, easy way to add an extensible News custom post type, News widget and vertical news scrolling widget to Wordpress.
+A quick, easy way to add an News custom post type, News widget and vertical news scrolling widget to Wordpress.
 
 == Description ==
 
