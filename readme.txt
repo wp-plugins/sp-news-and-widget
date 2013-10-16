@@ -52,11 +52,12 @@ No, you just need to create a page with "News". Thats it
 
 == Screenshots ==
 
-1. All News items
-2. Single News
+1. Admin all News items view
 2. Add new news
-3. Letest news widget 
-4. Vertical news scrolling widget
+3. Single News view
+4. Frontend all news view 
+5. Vertical news scrolling widget
+6. Admin side widgets view
 
 == Changelog ==
 
