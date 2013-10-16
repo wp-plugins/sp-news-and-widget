@@ -13,7 +13,9 @@ A quick, easy way to add an extensible News custom post type, News widget and ve
 
 This plugin add a News custom post type,  News widget and vertical news scrolling widget to your Wordpress site.
 
-The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts. Your all news items will appear at '/news', and single news items will appear at '/news/<permalink>'.
+The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
+
+Your all news items will appear at '/news', and single news items will appear at '/news/<permalink>'.
 
 Default Single news and All News  templates for news items are also provided. One stylesheet is also provided with these templates so that you can design it as per your layout.
 
