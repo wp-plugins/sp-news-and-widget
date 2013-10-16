@@ -11,6 +11,8 @@ A quick, easy way to add an extensible News custom post type, News widget and ve
 
 == Description ==
 
+Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget and vertical news scrolling widget.
+
 This plugin add a News custom post type,  News widget and vertical news scrolling widget to your Wordpress site.
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
@@ -23,6 +25,16 @@ If you are getting any kind of problum with "/news" link means your are not able
 first select "Default" and save then again select "Custom Structure "  and save. 
 
 Finally, the plugin adds a Recent News Items widget and vertical news scrolling widget , which can be placed on any sidebar available in your theme. You can set the title of this list and the number of news items to show.
+
+= Features include: =
+* Just create a news page with link name "news"
+* Easy to configure
+* Smoothly integrates into any theme
+* Yearly, Monthly and Daily archives
+* News Categories
+* News Tags
+* 2 News widgets
+* CSS and JS file for custmization
  
 == Installation ==
 
