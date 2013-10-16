@@ -32,7 +32,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 
 There is one templates named 'single-news.php' which controls the display of each individual news item on a page. There is also a template named 'all-news.php' which controls the display of the list of all news items.
 
-= Can I filter the list of news items by date? +
+= Can I filter the list of news items by date? + =
 
 Yes. Just as you can display a list of your regular posts by year, month, or day, you can display news items for a particular year (/news/2013/), month (/news/2013/04/), or day (/news/2013/04/20/).
 
