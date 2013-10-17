@@ -1,6 +1,6 @@
 === SP News and Widget ===
 Contributors: SP Technolab
-Tags: news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
+Tags: wordpress news plugin,  Free scrolling news wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.1
 Tested up to: 3.6.1
 Stable tag: trunk
