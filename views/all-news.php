@@ -35,7 +35,7 @@ get_header();
           <div class="entry-content">
                   <?php
                   if ( function_exists('has_post_thumbnail') && has_post_thumbnail() ) {
-                    the_post_thumbnail();
+                    the_post_thumbnail('thumbnail'); 
                   }
                   ?>
                   <div class="summary"><?php the_excerpt(); ?> <a class="moretag" href="<?php the_permalink() ?>"> Read More..</a></div>

@@ -1,19 +1,21 @@
 === SP News and Widget ===
 Contributors: SP Technolab
-Tags: wordpress news plugin,  Free scrolling news wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
+Tags: wordpress news plugin, wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.1
 Tested up to: 3.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A quick, easy way to add an News custom post type, News widget and vertical news scrolling widget to Wordpress.
+A quick, easy way to add an News custom post type, News widget, vertical and horizontal  scrolling news widget to Wordpress.
 
 == Description ==
 
-Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget and vertical news scrolling widget.
+Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
 
-This plugin add a News custom post type,  News widget and vertical news scrolling widget to your Wordpress site.
+View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
+
+This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
 
@@ -26,22 +28,25 @@ first select "Default" and save then again select "Custom Structure "  and save.
 
 Finally, the plugin adds a Recent News Items widget and vertical news scrolling widget , which can be placed on any sidebar available in your theme. You can set the title of this list and the number of news items to show.
 
-= Features include: =
+= New Features include: =
 * Just create a news page with link name "news"
+* Vertical and horizontal (Also added thumbnail option) news widget with setting page
+* Setting page
 * Easy to configure
 * Smoothly integrates into any theme
 * Yearly, Monthly and Daily archives
 * News Categories
 * News Tags
-* 2 News widgets
+* 3 News widgets 
 * CSS and JS file for custmization
+
  
 == Installation ==
 
 1. Upload the 'sp-news-and-widget' folder to the '/wp-content/plugins/' directory.
 1. Activate the SP News plugin through the 'Plugins' menu in WordPress.
 1. Add and manage news items on your site by clicking on the  'News' tab that appears in your admin menu.
-1. Create a page with the name of News OR Latest News BUT Link name should be "/news"
+1. Create a page with the name of News OR Latest News BUT Link name should be '/news'
 1. (Optional) Add and configure the News Items widget and vertical news scrolling widget for one or more your sidebars.
 
 == Frequently Asked Questions ==
@@ -64,14 +69,19 @@ No, you just need to create a page with "News". Thats it
 
 == Screenshots ==
 
-1. Admin all News items view
-2. Add new news
-3. Single News view
-4. Frontend all news view 
-5. Vertical news scrolling widget
-6. Admin side widgets view
+1. A complate view with comments
+2. Admin all News items view
+3. Add new news
+4. Single News view
+5. Widgets
+6. Admin setting page 
 
 == Changelog ==
+
+= 2.0 =
+* Added Vertical and horizontal news scrolling widget with setting page
+* New UI designs
+* Admin setting page
 
 = 1.0 =
 * Initial release
@@ -80,7 +90,14 @@ No, you just need to create a page with "News". Thats it
 * Adds Letest news widget
 * Adds Vertical news scrolling widget
 
+
+
 == Upgrade Notice ==
+
+= 2.0 =
+Added Vertical and horizontal news scrolling widget with setting page
 
 = 1.0 =
 Initial release
+
+
