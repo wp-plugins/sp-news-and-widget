@@ -5,7 +5,7 @@ Plugin URL: http://sptechnolab.com
 Description: A simple News and three widgets(static, scrolling and scrolling with thumbs) plugin
 Version: 2.0
 Author: SP Technolab
-Author URI: http://sptechnolab.com
+Author URI: http://www.sptechnolab.com
 Contributors: SP Technolab
 */
 /*
