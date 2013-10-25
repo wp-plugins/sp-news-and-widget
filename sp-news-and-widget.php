@@ -319,14 +319,33 @@ wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js
 
 	wp_enqueue_style( 'cssnews' );
 	wp_enqueue_script( 'vticker' );
-	function myscript() {
+	function mynewsscript() {
 	$option = 'NewsWidget_option';
 	$newsscrollingoptionadmin = get_option( $option, $default ); 
 	$customscrollpost = $newsscrollingoptionadmin['news_width']; 
+	$customscrollpostheight = $newsscrollingoptionadmin['news_height'];
+	$customscrollpostdelay = $newsscrollingoptionadmin['news_delay'];
+	$customscrollpostspeed = $newsscrollingoptionadmin['news_speed'];
+	
 		if ($customscrollpost == 0 )
 		{
 			$vtrue = 'true';
 		} else { $vtrue = 'false';
+		}
+		if ($customscrollpostheight == '' )
+		{
+			$vvisible = 3;
+		} else { $vvisible = $customscrollpostheight;
+		}
+		if ($customscrollpostdelay == '' )
+		{
+			$vdelay = 500;
+		} else { $vdelay = $customscrollpostdelay;
+		}
+		if ($customscrollpostspeed == '' )
+		{
+			$vspeed = 2000;
+		} else { $vspeed = $customscrollpostspeed;
 		}
 	
 	?>
@@ -336,22 +355,22 @@ jQuery(function() {
 	jQuery(".newsticker-jcarousellite").jCarouselLite({
 		vertical: <?php echo $vtrue; ?>,
 		hoverPause:true,
-		visible: <?php echo $newsscrollingoptionadmin['news_height']; ?>,
-		auto: <?php echo $newsscrollingoptionadmin['news_delay']; ?>,
-		speed:<?php echo $newsscrollingoptionadmin['news_speed']; ?>,
+		visible: <?php echo $vvisible; ?>,
+		auto: <?php echo $vdelay; ?>,
+		speed:<?php echo $vspeed; ?>,
 	});
 	jQuery(".newstickerthumb-jcarousellite").jCarouselLite({
-		vertical:  <?php echo $vtrue; ?>,
+		vertical: <?php echo $vtrue; ?>,
 		hoverPause:true,
-		visible: <?php echo $newsscrollingoptionadmin['news_height']; ?>,
-		auto: <?php echo $newsscrollingoptionadmin['news_delay']; ?>,
-		speed:<?php echo $newsscrollingoptionadmin['news_speed']; ?>,
+		visible: <?php echo $vvisible; ?>,
+		auto: <?php echo $vdelay; ?>,
+		speed:<?php echo $vspeed; ?>,
 	});
 });
 </script>
 	<?php
 	}
-add_action('wp_head', 'myscript');
+add_action('wp_head', 'mynewsscript');
 add_filter( 'template_include', 'get_news_template' ) ;
 
 class SP_News_setting
