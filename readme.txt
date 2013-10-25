@@ -47,7 +47,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 1. Activate the SP News plugin through the 'Plugins' menu in WordPress.
 1. Add and manage news items on your site by clicking on the  'News' tab that appears in your admin menu.
 1. Create a page with the name of News OR Latest News BUT Link name should be '/news'
-1. (Optional) Add and configure the News Items widget and vertical news scrolling widget for one or more your sidebars.
+1. (Optional) Add and configure the News Items widget, vertical and horizontal news scrolling widget for one or more your sidebars.
 
 == Frequently Asked Questions ==
 
