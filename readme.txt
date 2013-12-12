@@ -14,7 +14,7 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
 
-=Important Note : =
+<b>Important Note : </b>
 *Now you can also scroll main page news section. A Setting page also added.
 *By default scrolling is enabled in the main main news page. If you want static news then please go to seeting > News Widget Settings and make "Main page news scrolling" false 
 
