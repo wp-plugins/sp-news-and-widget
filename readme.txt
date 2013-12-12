@@ -33,7 +33,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 
 = Added New Features : =
 * Scroll main page news
-* Setting page for ebable or disable main page news scrolling
+* Setting page for enable or disable main page news scrolling
 * Setting page for main news page vertical and horizontal news scrolling
 
 = Features include: =
@@ -90,7 +90,7 @@ No, you just need to create a page with "News". Thats it
 
 = 2.1 =
 * Scroll main page news
-* Setting page for ebable or disable main page news scrolling
+* Setting page for enable or disable main page news scrolling
 * Setting page for main news page vertical and horizontal news scrolling
 
 = 2.0 =
@@ -111,7 +111,7 @@ No, you just need to create a page with "News". Thats it
 
 = 2.1 =
 Scroll main page news
-Setting page for ebable or disable main page news scrolling
+Setting page for enable or disable main page news scrolling
 Setting page for main news page vertical and horizontal news scrolling
 
 = 2.0 =
