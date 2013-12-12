@@ -16,7 +16,7 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 
  <code>Important Note : 
 *Now you can also scroll main page news section. A Setting page also added.
-*By default scrolling is enabled in the main  news page. If you want static news then please go to seeting > News Widget Settings and make "Main page news scrolling" false  </code>
+*By default scrolling is enabled in the main  news page. If you want static news then please go to "setting > News Widget Settings" and make "Main page news scrolling" false  </code>
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
