@@ -3,7 +3,7 @@
 Plugin Name: SP News and three widgets(static, scrolling and scrolling with thumbs)
 Plugin URL: http://sptechnolab.com
 Description: A simple News and three widgets(static, scrolling and scrolling with thumbs) plugin
-Version: 2.0
+Version: 2.1
 Author: SP Technolab
 Author URI: http://www.sptechnolab.com
 Contributors: SP Technolab
@@ -326,6 +326,8 @@ wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js
 	$customscrollpostheight = $newsscrollingoptionadmin['news_height'];
 	$customscrollpostdelay = $newsscrollingoptionadmin['news_delay'];
 	$customscrollpostspeed = $newsscrollingoptionadmin['news_speed'];
+  
+    $news_mainpage_direction = $newsscrollingoptionadmin['news_mainpage_direction'];    
 	
 		if ($customscrollpost == 0 )
 		{
@@ -347,7 +349,11 @@ wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js
 			$vspeed = 2000;
 		} else { $vspeed = $customscrollpostspeed;
 		}
-	
+	   	if ($news_mainpage_direction == '' || $news_mainpage_direction == 0 )
+		{
+			$vtruenews = 'true';
+		} else { $vtruenews = 'false';
+		}
 	?>
 	<script type="text/javascript">
 	
@@ -361,6 +367,13 @@ jQuery(function() {
 	});
 	jQuery(".newstickerthumb-jcarousellite").jCarouselLite({
 		vertical: <?php echo $vtrue; ?>,
+		hoverPause:true,
+		visible: <?php echo $vvisible; ?>,
+		auto: <?php echo $vdelay; ?>,
+		speed:<?php echo $vspeed; ?>,
+	});
+		jQuery(".newstickerthumbmain-jcarousellite").jCarouselLite({
+		vertical: <?php echo $vtruenews; ?>,
 		hoverPause:true,
 		visible: <?php echo $vvisible; ?>,
 		auto: <?php echo $vdelay; ?>,
@@ -474,7 +487,21 @@ class SP_News_setting
             array( $this, 'news_speed_callback' ), 
             'news-setting-admin', 
             'setting_section_id'
+        );     
+		 add_settings_field(
+            'news_mainpage', 
+            'Main page news scrolling', 
+            array( $this, 'news_mainpage_callback' ), 
+            'news-setting-admin', 
+            'setting_section_id'
         );      
+		 add_settings_field(
+            'news_mainpage_direction', 
+            'Main page news scrolling direction (Vertical OR Horizontal)', 
+            array( $this, 'news_mainpage_direction' ), 
+            'news-setting-admin', 
+            'setting_section_id'
+        );      	
     }
 
     /**
@@ -496,6 +523,11 @@ class SP_News_setting
 			
 		 if( isset( $input['news_speed'] ) )
             $new_input['news_speed'] = sanitize_text_field( $input['news_speed'] );	
+			
+		 if( isset( $input['news_mainpage'] ) )
+            $new_input['news_mainpage'] = sanitize_text_field( $input['news_mainpage'] );
+		if( isset( $input['news_mainpage_direction'] ) )
+            $new_input['news_mainpage_direction'] = sanitize_text_field( $input['news_mainpage_direction'] );			
 
         return $new_input;
     }
@@ -550,6 +582,24 @@ class SP_News_setting
             isset( $this->options['news_speed'] ) ? esc_attr( $this->options['news_speed']) : ''
         );
 		printf(' ie 500, 1000 milliseconds speed');
+    }
+	
+	  public function news_mainpage_callback()
+    {
+        printf(
+            '<input type="text" id="news_mainpage" name="NewsWidget_option[news_mainpage]" value="%s" />',
+            isset( $this->options['news_mainpage'] ) ? esc_attr( $this->options['news_mainpage']) : ''
+        );
+	printf(' Enter "0" for <b>True</b> and "1" for <b>False</b>');
+    }
+	
+	  public function news_mainpage_direction()
+    {
+        printf(
+            '<input type="text" id="news_mainpage_direction" name="NewsWidget_option[news_mainpage_direction]" value="%s" />',
+            isset( $this->options['news_mainpage_direction'] ) ? esc_attr( $this->options['news_mainpage_direction']) : ''
+        );
+		printf(' Enter "0" for <b>Vertical Scrolling</b> and "1" for <b>Horizontal Scrolling</b>');
     }
 }
 

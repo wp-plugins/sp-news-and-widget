@@ -23,4 +23,5 @@
 
 .newsticker-jcarousellite, .newstickerthumb-jcarousellite { width:100% !important; }
 .newsticker-jcarousellite ul li{ list-style:none; display:block;  }
+.sp-news{overflow:hidden}
 

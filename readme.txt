@@ -2,7 +2,7 @@
 Contributors: SP Technolab, anoopranawat 
 Tags: wordpress news plugin, wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.1
-Tested up to: 3.7
+Tested up to: 3.7.1
 Author URI: http://www.sptechnolab.com
 Stable tag: trunk
 License: GPLv2 or later
@@ -13,6 +13,8 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 == Description ==
 
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
+
+Now you can also scroll main page news section. A Setting page also added. 
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
@@ -29,7 +31,12 @@ first select "Default" and save then again select "Custom Structure "  and save.
 
 Finally, the plugin adds a Recent News Items widget and vertical news scrolling widget , which can be placed on any sidebar available in your theme. You can set the title of this list and the number of news items to show.
 
-= New Features include: =
+= Added New Features : =
+* Scroll main page news
+* Setting page for ebable or disable main page news scrolling
+* Setting page for main news page vertical and horizontal news scrolling
+
+= Features include: =
 * Just create a news page with link name "news"
 * Vertical and horizontal (Also added thumbnail option) news widget with setting page
 * Setting page
@@ -71,14 +78,20 @@ No, you just need to create a page with "News". Thats it
 
 == Screenshots ==
 
-1. A complate view with comments
-2. Admin all News items view
-3. Add new news
-4. Single News view
-5. Widgets
-6. Admin setting page 
+1. Main page news scrolling
+2. A complate view with comments
+3. Admin all News items view
+4. Add new news
+5. Single News view
+6. Widgets
+7. Admin setting page 
 
 == Changelog ==
+
+= 2.1 =
+* Scroll main page news
+* Setting page for ebable or disable main page news scrolling
+* Setting page for main news page vertical and horizontal news scrolling
 
 = 2.0 =
 * Added Vertical and horizontal news scrolling widget with setting page
@@ -95,6 +108,11 @@ No, you just need to create a page with "News". Thats it
 
 
 == Upgrade Notice ==
+
+= 2.1 =
+Scroll main page news
+Setting page for ebable or disable main page news scrolling
+Setting page for main news page vertical and horizontal news scrolling
 
 = 2.0 =
 Added Vertical and horizontal news scrolling widget with setting page
