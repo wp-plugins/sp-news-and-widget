@@ -1,7 +1,7 @@
 <?php
 /*Template Name: All News
  *
- * You can customize this view by putting a replacement file of the same name (single.php) in the events/ directory of your theme.
+ * You can customize this view changeing the class name OR id name.
  *
  */
  
