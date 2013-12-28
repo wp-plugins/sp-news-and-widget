@@ -1,7 +1,7 @@
 <?php
 /*Template Name: Single News
  *
- *You can customize this view by putting a replacement file of the same name single-news.php) in the directory of your theme.
+ *You can customize this view changeing the class name OR id name.
  *
  */
  
