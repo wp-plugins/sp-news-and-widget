@@ -4,9 +4,9 @@ Plugin Name: SP News and three widgets(static, scrolling and scrolling with thum
 Plugin URL: http://sptechnolab.com
 Description: A simple News and three widgets(static, scrolling and scrolling with thumbs) plugin
 Version: 2.1
-Author: SP Technolab
+Author: sptechnolab
 Author URI: http://www.sptechnolab.com
-Contributors: SP Technolab
+Contributors: sptechnolab
 */
 /*
  * Register CPT sp_News
