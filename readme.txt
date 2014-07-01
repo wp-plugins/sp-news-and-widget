@@ -20,6 +20,8 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
+View [DEMO] (http://wordpushplugins.in/news/) for additional information.
+
 This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
