@@ -31,8 +31,7 @@ Arts news
 
 *Comments for the news
 
-*Users that are using version 2.1 please paste the shortcode in their News page
-<code> [sp_news] </code>
+*Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code>
 
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
