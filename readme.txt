@@ -17,7 +17,7 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 
 =Important Note =
 
-*Now you can Display news post with the help of short code <code> [sp_news] </code>.
+*Now you can Display news post with the help of short code <code> [sp_news] </code>
 
 *Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
 
