@@ -2,7 +2,7 @@
 Contributors: sptechnolab, anoopranawat 
 Tags: wordpress news plugin, main news page scrolling , wordpress vertical news plugin widget, wordpress horizontal news plugin widget , Free scrolling news wordpress plugin, Free scrolling news widget wordpress plugin, WordPress set post or page as news, WordPress dynamic news, news, latest news, custom post type, cpt, widget, vertical news scrolling widget, news widget
 Requires at least: 3.1
-Tested up to: 3.8
+Tested up to: 3.9.1
 Author URI: http://www.sptechnolab.com
 Stable tag: trunk
 License: GPLv2 or later
@@ -14,9 +14,24 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
 
- <code>Important Note : 
-*Now you can also scroll main page news section. A Setting page also added.
-*By default scrolling is enabled in the main  news page. If you want static news then please go to "setting > News Widget Settings" and make "Main page news scrolling" false  </code>
+== Important Note == 
+
+*Now you can call news post with the help of short code <code> [sp_news] </code>.
+
+*Also you can call the news post with category wise <code> Sports news [sp_news category=category_id] </code>
+
+*Also you can call the news post with Multiple category wise 
+<code> Sports news 
+[sp_news category=category_id]
+
+Arts news 
+[sp_news category=category_id]
+ </code>
+
+*Comments for the news
+
+*Users that are using version 2.1 please paste the shortcode in their News page</code>
+
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
@@ -26,22 +41,20 @@ This plugin add a News custom post type,  News widget,  vertical and horizontal 
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
 
-Your all news items will appear at '/news', and single news items will appear at '/news/<permalink>'.
-
 Default Single news and All News  templates for news items are also provided. One stylesheet is also provided with these templates so that you can design it as per your layout.
 
-If you are getting any kind of problum with "/news" link means your are not able to see all news items then please remodify your permalinks Structure for example 
+If you are getting any kind of problum with news page means your are not able to see all news items then please remodify your permalinks Structure for example 
 first select "Default" and save then again select "Custom Structure "  and save. 
 
 Finally, the plugin adds a Recent News Items widget and vertical news scrolling widget , which can be placed on any sidebar available in your theme. You can set the title of this list and the number of news items to show.
 
 = Added New Features : =
-* Scroll main page news
-* Setting page for enable or disable main page news scrolling
-* Setting page for main news page vertical and horizontal news scrolling
+* Shortcode <code> [sp_news] </code> for news page.
+* Category wise News <code> Sports news [sp_news category=category_id] </code>
+
 
 = Features include: =
-* Just create a news page with link name "news"
+* Just create a news page with any name and add the shortcode  <code> [sp_news] </code>
 * Vertical and horizontal (Also added thumbnail option) news widget with setting page
 * Setting page
 * Easy to configure
@@ -58,7 +71,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 1. Upload the 'sp-news-and-widget' folder to the '/wp-content/plugins/' directory.
 1. Activate the SP News plugin through the 'Plugins' menu in WordPress.
 1. Add and manage news items on your site by clicking on the  'News' tab that appears in your admin menu.
-1. Create a page with the name of News OR Latest News BUT Link name should be '/news'
+1. Create a page with the any name and paste this short code
 1. (Optional) Add and configure the News Items widget, vertical and horizontal news scrolling widget for one or more your sidebars.
 1. Go to admin 'Setting page -> News Widget Setting' and enter your settings for  vertical and horizontal news scrolling widgets eg Scrolling Direction, Number of news items,  delay  etc. 
 
@@ -92,6 +105,12 @@ No, you just need to create a page with "News". Thats it
 
 == Changelog ==
 
+
+= 2.2 =
+* Call the news post with shortcode
+* Call the news post with category wise
+
+
 = 2.1 =
 * Scroll main page news
 * Setting page for enable or disable main page news scrolling
@@ -112,6 +131,10 @@ No, you just need to create a page with "News". Thats it
 
 
 == Upgrade Notice ==
+
+= 2.2 =
+* Call the news post with shortcode
+* Call the news post with category wise
 
 = 2.1 =
 Scroll main page news

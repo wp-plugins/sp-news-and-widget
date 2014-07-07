@@ -3,10 +3,10 @@
 Plugin Name: SP News and three widgets(static, scrolling and scrolling with thumbs)
 Plugin URL: http://sptechnolab.com
 Description: A simple News and three widgets(static, scrolling and scrolling with thumbs) plugin
-Version: 2.1
-Author: sptechnolab
+Version: 2.2
+Author: SP Technolab
 Author URI: http://www.sptechnolab.com
-Contributors: sptechnolab
+Contributors: SP Technolab
 */
 /*
  * Register CPT sp_News
@@ -147,23 +147,25 @@ class SP_News_scrolling_Widget extends WP_Widget {
 
     function form($instance) {
         $instance = wp_parse_args((array) $instance, array( 'title' => '' ));
-        $title = isset($instance['title']) ? esc_attr($instance['title']) : '';       
+        $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
+        $num_items = isset($instance['num_items']) ? absint($instance['num_items']) : 5;              
     ?>
       <p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label></p>
-     
+      <p><label for="<?php echo $this->get_field_id('num_items'); ?>">Number of Items: <input class="widefat" id="<?php echo $this->get_field_id('num_items'); ?>" name="<?php echo $this->get_field_name('num_items'); ?>" type="text" value="<?php echo attribute_escape($num_items); ?>" /></label></p>
     <?php
     }
 
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
-        $instance['title'] = $new_instance['title'];        
+        $instance['title'] = $new_instance['title'];
+        $instance['num_items'] = $new_instance['num_items'];        
         return $instance;
     }
     function widget($news_args, $instance) {
         extract($news_args, EXTR_SKIP);
         $current_post_name = get_query_var('name');
         $title = empty($instance['title']) ? '' : apply_filters('widget_title', $instance['title']);  
-
+		  $num_items = empty($instance['num_items']) ? '5' : apply_filters('widget_title', $instance['num_items']);  
         $postcount = 0;
 
         echo $before_widget;
@@ -176,7 +178,7 @@ class SP_News_scrolling_Widget extends WP_Widget {
 			   <ul>
             <?php // setup the query
             $news_args = array( 'suppress_filters' => true,
-                          
+       							'posts_per_page' => $num_items,                   
                            'post_type' => 'news',
                            'order' => 'DESC'
                          );
@@ -185,16 +187,13 @@ class SP_News_scrolling_Widget extends WP_Widget {
             if ($cust_loop->have_posts()) : while ($cust_loop->have_posts()) : $cust_loop->the_post(); $postcount++;
                     ?>
                     <li >
-			
                         <a class="post-title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-						
                     </li>
             <?php endwhile;
             endif;
              wp_reset_query(); ?>
-
                 </ul>
-				            </div>
+	            </div>
             </div>
 <?php
         echo $after_widget;
@@ -292,28 +291,61 @@ function sp_news_thumb_widget_load_widgets() {
 /* Load the widget */
 add_action( 'widgets_init', 'sp_news_thumb_widget_load_widgets' );
 
-function get_news_template( $template_path ) {
 
-    if ( get_post_type() == 'news' ) {
-        if ( is_single() ) {
-           
-            if ( $theme_file = locate_template( array ( 'single-news.php' ) ) ) {
-                $template_path = $theme_file;
-            } else {
-                $template_path = plugin_dir_path( __FILE__ ) . '/views/single-news.php';
-            }
-        } elseif ( is_archive() ) {
-            if ( $theme_file = locate_template( array ( 'all-news.php' ) ) ) {
-                $template_path = $theme_file;
-            } else {
-                $template_path = plugin_dir_path( __FILE__ ) . '/views/all-news.php';
-            }
-        }
+function get_news( $atts, $content = null ){
+            // setup the query
+            extract(shortcode_atts(array(
+		"limit" => '',	
+		"category" => '',
+		"comment_status" => ''
+	), $atts));
+	if( $comment_status == 'open' ) { 
+		$com = 'open'; 
+	} else {
+		$com = 'closed';
+	} 
+	// Define limit
+	if( $limit ) { 
+		$posts_per_page = $limit; 
+	} else {
+		$posts_per_page = '-1';
+	}
+	update_option( 'default_comment_status', $com );
+	if( $category ) { 
+		$cat = $category; 
+	} else {
+		$cat = '';
+	}
 
-    }
+            $news_args = array( 'suppress_filters' => true,
+                           'posts_per_page' => $posts_per_page,
+                           'post_type' => 'news',
+                           'order' => 'DESC',
+                           'cat'	=> $cat
+                         );
+                         
+			
+				$cust_loop = new WP_Query($news_args);
+            
+          
+     
+            if ($cust_loop->have_posts()) : while ($cust_loop->have_posts()) : $cust_loop->the_post();
+            				get_template_part( 'content');  
+           endwhile;
+            endif;
+             wp_reset_query(); 
+				
+				 
+					$status = get_option('default_comment_status');				  
+				  if($status == 'open'){					
+				 comments_template();
+				}else {
+				} 
+				             
+	}
+add_shortcode('sp_news','get_news');	
 
-    return $template_path;
-}
+
 wp_register_style( 'cssnews', plugin_dir_url( __FILE__ ) . 'css/stylenews.css' );
 wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js', array( 'jquery' ) );			
 
@@ -327,8 +359,6 @@ wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js
 	$customscrollpostdelay = $newsscrollingoptionadmin['news_delay'];
 	$customscrollpostspeed = $newsscrollingoptionadmin['news_speed'];
   
-    $news_mainpage_direction = $newsscrollingoptionadmin['news_mainpage_direction'];    
-	
 		if ($customscrollpost == 0 )
 		{
 			$vtrue = 'true';
@@ -349,42 +379,29 @@ wp_register_script( 'vticker', plugin_dir_url( __FILE__ ) . 'js/jcarousellite.js
 			$vspeed = 2000;
 		} else { $vspeed = $customscrollpostspeed;
 		}
-	   	if ($news_mainpage_direction == '' || $news_mainpage_direction == 0 )
-		{
-			$vtruenews = 'true';
-		} else { $vtruenews = 'false';
-		}
 	?>
 	<script type="text/javascript">
 	
 jQuery(function() {
-	jQuery(".newsticker-jcarousellite").jCarouselLite({
+	 jQuery(".newsticker-jcarousellite").jCarouselLite({
 		vertical: <?php echo $vtrue; ?>,
 		hoverPause:true,
 		visible: <?php echo $vvisible; ?>,
 		auto: <?php echo $vdelay; ?>,
 		speed:<?php echo $vspeed; ?>,
-	});
-	jQuery(".newstickerthumb-jcarousellite").jCarouselLite({
+	});  
+	 jQuery(".newstickerthumb-jcarousellite").jCarouselLite({
 		vertical: <?php echo $vtrue; ?>,
 		hoverPause:true,
 		visible: <?php echo $vvisible; ?>,
 		auto: <?php echo $vdelay; ?>,
-		speed:<?php echo $vspeed; ?>,
-	});
-		jQuery(".newstickerthumbmain-jcarousellite").jCarouselLite({
-		vertical: <?php echo $vtruenews; ?>,
-		hoverPause:true,
-		visible: <?php echo $vvisible; ?>,
-		auto: <?php echo $vdelay; ?>,
-		speed:<?php echo $vspeed; ?>,
-	});
+		speed:<?php echo $vspeed; ?>,  
+	}); 
 });
 </script>
 	<?php
 	}
 add_action('wp_head', 'mynewsscript');
-add_filter( 'template_include', 'get_news_template' ) ;
 
 class SP_News_setting
 {
@@ -460,7 +477,7 @@ class SP_News_setting
 
         add_settings_field(
             'news_width', // ID
-            'Scrolling Direction (Vertical OR Horizontal) ', // Title 
+            'Widget Scrolling Direction (Vertical OR Horizontal) ', // Title 
             array( $this, 'news_width_callback' ), // Callback
             'news-setting-admin', // Page
             'setting_section_id' // Section           
@@ -468,7 +485,7 @@ class SP_News_setting
 
         add_settings_field(
             'news_height', 
-            'Number of news items', 
+            'Number of news visible at a time', 
             array( $this, 'news_height_callback' ), 
             'news-setting-admin', 
             'setting_section_id'
@@ -488,20 +505,7 @@ class SP_News_setting
             'news-setting-admin', 
             'setting_section_id'
         );     
-		 add_settings_field(
-            'news_mainpage', 
-            'Main page news scrolling', 
-            array( $this, 'news_mainpage_callback' ), 
-            'news-setting-admin', 
-            'setting_section_id'
-        );      
-		 add_settings_field(
-            'news_mainpage_direction', 
-            'Main page news scrolling direction (Vertical OR Horizontal)', 
-            array( $this, 'news_mainpage_direction' ), 
-            'news-setting-admin', 
-            'setting_section_id'
-        );      	
+	
     }
 
     /**
@@ -523,11 +527,6 @@ class SP_News_setting
 			
 		 if( isset( $input['news_speed'] ) )
             $new_input['news_speed'] = sanitize_text_field( $input['news_speed'] );	
-			
-		 if( isset( $input['news_mainpage'] ) )
-            $new_input['news_mainpage'] = sanitize_text_field( $input['news_mainpage'] );
-		if( isset( $input['news_mainpage_direction'] ) )
-            $new_input['news_mainpage_direction'] = sanitize_text_field( $input['news_mainpage_direction'] );			
 
         return $new_input;
     }
@@ -582,24 +581,6 @@ class SP_News_setting
             isset( $this->options['news_speed'] ) ? esc_attr( $this->options['news_speed']) : ''
         );
 		printf(' ie 500, 1000 milliseconds speed');
-    }
-	
-	  public function news_mainpage_callback()
-    {
-        printf(
-            '<input type="text" id="news_mainpage" name="NewsWidget_option[news_mainpage]" value="%s" />',
-            isset( $this->options['news_mainpage'] ) ? esc_attr( $this->options['news_mainpage']) : ''
-        );
-	printf(' Enter "0" for <b>True</b> and "1" for <b>False</b>');
-    }
-	
-	  public function news_mainpage_direction()
-    {
-        printf(
-            '<input type="text" id="news_mainpage_direction" name="NewsWidget_option[news_mainpage_direction]" value="%s" />',
-            isset( $this->options['news_mainpage_direction'] ) ? esc_attr( $this->options['news_mainpage_direction']) : ''
-        );
-		printf(' Enter "0" for <b>Vertical Scrolling</b> and "1" for <b>Horizontal Scrolling</b>');
     }
 }
 
