@@ -35,7 +35,7 @@ Arts news
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
-View [DEMO] (http://wordpushplugins.in/news/) for additional information.
+View [DEMO](http://wordpushplugins.in/news/) for additional information.
 
 This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
@@ -71,7 +71,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 1. Upload the 'sp-news-and-widget' folder to the '/wp-content/plugins/' directory.
 1. Activate the SP News plugin through the 'Plugins' menu in WordPress.
 1. Add and manage news items on your site by clicking on the  'News' tab that appears in your admin menu.
-1. Create a page with the any name and paste this short code
+1. Create a page with the any name and paste this short code  <code> [sp_news] </code>.
 1. (Optional) Add and configure the News Items widget, vertical and horizontal news scrolling widget for one or more your sidebars.
 1. Go to admin 'Setting page -> News Widget Setting' and enter your settings for  vertical and horizontal news scrolling widgets eg Scrolling Direction, Number of news items,  delay  etc. 
 
@@ -79,7 +79,7 @@ Finally, the plugin adds a Recent News Items widget and vertical news scrolling 
 
 = What news templates are available? =
 
-There is one templates named 'single-news.php' which controls the display of each individual news item on a page. There is also a template named 'all-news.php' which controls the display of the list of all news items.
+This plugin use your theme file content.php file
 
 = Can I filter the list of news items by date? + =
 
@@ -91,7 +91,7 @@ No, not usually. But if you are geting "/news" page OR 404 error on single news 
 
 = Are there shortcodes for news items? =
 
-No, you just need to create a page with "News". Thats it
+Yse  <code> [sp_news] </code>.
 
 == Screenshots ==
 
