@@ -42,7 +42,6 @@ This plugin add a News custom post type,  News widget,  vertical and horizontal 
 
 The plugin adds a News tab to your admin menu, which allows you to enter news items just as you would regular posts.
 
-Default Single news and All News  templates for news items are also provided. One stylesheet is also provided with these templates so that you can design it as per your layout.
 
 If you are getting any kind of problum with news page means your are not able to see all news items then please remodify your permalinks Structure for example 
 first select "Default" and save then again select "Custom Structure "  and save. 
