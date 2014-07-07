@@ -27,11 +27,12 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 
 Arts news 
 [sp_news category=category_id]
+</code>
 
 *Comments for the news
 
 *Users that are using version 2.1 please paste the shortcode in their News page</code>
-</code>
+
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
