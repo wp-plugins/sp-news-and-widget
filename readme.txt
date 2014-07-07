@@ -13,7 +13,8 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 == Description ==
 
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
-<code>
+
+
 =Important Note =
 
 *Now you can Display news post with the help of short code <code> [sp_news] </code>.
@@ -26,7 +27,6 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 
 Arts news 
 [sp_news category=category_id]
- </code>
 
 *Comments for the news
 
