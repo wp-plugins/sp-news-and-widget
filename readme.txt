@@ -13,14 +13,14 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 == Description ==
 
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
+<code>
+=Important Note =
 
-<b>Important Note </b>
+*Now you can Display news post with the help of short code <code> [sp_news] </code>.
 
-*Now you can call news post with the help of short code <code> [sp_news] </code>.
+*Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
 
-*Also you can call the news post with category wise <code> Sports news [sp_news category=category_id] </code>
-
-*Also you can call the news post with Multiple category wise 
+*Also you can Display the news post with Multiple category wise 
 <code> Sports news 
 [sp_news category=category_id]
 
@@ -31,7 +31,7 @@ Arts news
 *Comments for the news
 
 *Users that are using version 2.1 please paste the shortcode in their News page</code>
-
+</code>
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
