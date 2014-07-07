@@ -34,9 +34,10 @@ Arts news
 *Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code>
 
 
+View [DEMO](http://wordpushplugins.in/news/) for additional information.
+
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
-View [DEMO](http://wordpushplugins.in/news/) for additional information.
 
 This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
