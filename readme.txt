@@ -15,7 +15,6 @@ A quick, easy way to add an News custom post type, News widget, vertical and hor
 Every CMS site needs a news section. SP News  allows you add, manage and display news, date archives, widget, vertical and horizontal news scrolling widget.
 
 View [DEMO](http://wordpushplugins.in/news/) for additional information.
-
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
 =Important Note For How to Install =
