@@ -18,7 +18,7 @@ View [DEMO](http://wordpushplugins.in/news/) for additional information.
 
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
-=Important Note =
+=Important Note For How to Install =
 
 *Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
 
