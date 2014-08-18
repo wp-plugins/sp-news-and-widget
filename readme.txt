@@ -104,6 +104,9 @@ Yse  <code> [sp_news] </code>.
 
 == Changelog ==
 
+= 2.2.1 =
+* fixed the bug : Shows news on top of static page 
+
 
 = 2.2 =
 * Call the news post with shortcode
@@ -130,6 +133,9 @@ Yse  <code> [sp_news] </code>.
 
 
 == Upgrade Notice ==
+
+= 2.2.1 =
+* fixed the bug : Shows news on top of static page
 
 = 2.2 =
 * Call the news post with shortcode

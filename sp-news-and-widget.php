@@ -3,7 +3,7 @@
 Plugin Name: SP News and three widgets(static, scrolling and scrolling with thumbs)
 Plugin URL: http://sptechnolab.com
 Description: A simple News and three widgets(static, scrolling and scrolling with thumbs) plugin
-Version: 2.2
+Version: 2.2.1
 Author: SP Technolab
 Author URI: http://www.sptechnolab.com
 Contributors: SP Technolab
@@ -48,7 +48,7 @@ function sp_cpt_news_init() {
     'hierarchical'        => false,
     'menu_position'       => 8,
     'menu_icon'           => plugins_url( 'images/newspaper-add-icon.png', __FILE__ ),
-    'supports'            => array('title','editor','thumbnail','excerpt'),
+    'supports'            => array('title','editor','thumbnail','excerpt','comments'),
     'taxonomies'          => array('category', 'post_tag')
   );
   register_post_type('news',$news_args);
@@ -296,27 +296,20 @@ function get_news( $atts, $content = null ){
             // setup the query
             extract(shortcode_atts(array(
 		"limit" => '',	
-		"category" => '',
-		"comment_status" => ''
+		"category" => ''
 	), $atts));
-	if( $comment_status == 'open' ) { 
-		$com = 'open'; 
-	} else {
-		$com = 'closed';
-	} 
 	// Define limit
 	if( $limit ) { 
 		$posts_per_page = $limit; 
 	} else {
 		$posts_per_page = '-1';
 	}
-	update_option( 'default_comment_status', $com );
 	if( $category ) { 
 		$cat = $category; 
 	} else {
 		$cat = '';
 	}
-
+	ob_start();
             $news_args = array( 'suppress_filters' => true,
                            'posts_per_page' => $posts_per_page,
                            'post_type' => 'news',
@@ -335,13 +328,7 @@ function get_news( $atts, $content = null ){
             endif;
              wp_reset_query(); 
 				
-				 
-					$status = get_option('default_comment_status');				  
-				  if($status == 'open'){					
-				 comments_template();
-				}else {
-				} 
-				             
+		return ob_get_clean();			             
 	}
 add_shortcode('sp_news','get_news');	
 
