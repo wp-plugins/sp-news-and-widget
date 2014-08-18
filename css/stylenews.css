@@ -1,0 +1,10 @@
+
+.sp-news .date{display:block; background:url(../images/Calendar-Empty-icon.png) 0 50% no-repeat; padding:5px 0 5px 20px;}
+.SP_News_Widget ul li{padding:5px 0 5px 20px; border-bottom:1px solid #ddd; background:url(../images/Calendar-Empty-icon.png) 0 8px no-repeat; list-style:none !important;}
+
+.SP_News_scrolling_Widget ul li{padding:5px 0 5px 20px; border-bottom:1px solid #ddd; background:url(../images/Calendar-Empty-icon.png) 0 8px no-repeat;}
+
+
+
+.sp-news{overflow:hidden; clear:both !important;}
+
