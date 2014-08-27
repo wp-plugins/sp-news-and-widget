@@ -35,7 +35,7 @@ Arts news
 
 *Comments for the news
 
-*Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code> and If your Permalink link is www.yourdoamin.com/news then plaese change to "news" to other name otherwise all your news will go to archive page.
+*Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code> and If your Permalink link is www.yourdoamin.com/news then plaese change to "news" to other name like "ournews", "latestnews etc" otherwise all your news will go to archive page.
 
 This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
