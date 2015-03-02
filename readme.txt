@@ -17,14 +17,14 @@ Every CMS site needs a news section. SP News  allows you add, manage and display
 View [DEMO](http://wordpushplugins.in/latestnews/) for additional information.
 View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/) for additional information.
 
-=Important Note For How to Install =
+= Installation help and support =
+* Please check installation help on our website. View [Installation help and support](http://wponlinesupport.com/plugin-installation-support/) 
+* Get Free installation and setup on your website.
 
+= Important Note For How to Install =
 *Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
-
 *Now you can Display news post with the help of short code <code> [sp_news] </code>
-
 *Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
-
 *Also you can Display the news post with Multiple category wise 
 <code> Sports news 
 [sp_news category=category_id]
