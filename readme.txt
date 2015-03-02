@@ -22,10 +22,10 @@ View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/)
 * Get Free installation and setup on your website.
 
 = Important Note For How to Install =
-*Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
-*Now you can Display news post with the help of short code <code> [sp_news] </code>
-*Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
-*Also you can Display the news post with Multiple category wise 
+* Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
+* Now you can Display news post with the help of short code <code> [sp_news] </code>
+* Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
+* Also you can Display the news post with Multiple category wise 
 <code> Sports news 
 [sp_news category=category_id]
 
@@ -33,9 +33,9 @@ Arts news
 [sp_news category=category_id]
 </code>
 
-*Comments for the news
+* Comments for the news
 
-*Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code> and If your Permalink link is www.yourdoamin.com/news then plaese change to "news" to other name like "ournews", "latestnews etc" otherwise all your news will go to archive page.
+* Users that are using version 2.1 please paste the shortcode in their News page <code> [sp_news] </code> and If your Permalink link is www.yourdoamin.com/news then plaese change to "news" to other name like "ournews", "latestnews etc" otherwise all your news will go to archive page.
 
 This plugin add a News custom post type,  News widget,  vertical and horizontal news scrolling widget( With setting page 'setting -> News Widget Setting') to your Wordpress site.
 
