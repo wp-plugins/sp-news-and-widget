@@ -23,8 +23,10 @@ View [screenshots](http://wordpress.org/plugins/sp-news-and-widget/screenshots/)
 
 = Important Note For How to Install =
 * Please make sure that Permalink link should not be "/news" Otherwise all your news will go to archive page. You can give it other name like "/ournews, /latestnews etc"  
-* Now you can Display news post with the help of short code <code> [sp_news] </code>
-* Also you can Display the news post with category wise <code> Sports news [sp_news category=category_id] </code>
+* Now you can Display news post with the help of short code 
+<code> [sp_news] </code>
+* Also you can Display the news post with category wise
+ <code> Sports news [sp_news category=category_id] </code>
 * Also you can Display the news post with Multiple category wise 
 <code> Sports news 
 [sp_news category=category_id]
